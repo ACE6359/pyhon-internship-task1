@@ -3,7 +3,7 @@ from collections import Counter
 import heapq
 import random
 
-# Task 1: Find All Permutations of a String
+# Task 33: Find All Permutations of a String
 def find_permutations(s):
     return [''.join(p) for p in permutations(s)]
 
@@ -12,7 +12,7 @@ print(find_permutations("abc"))
 # Example 2
 print(find_permutations("xyz"))
 
-# Task 2: N-th Fibonacci Number
+# Task 34: N-th Fibonacci Number
 def fibonacci(n):
     if n <= 1:
         return n
@@ -27,7 +27,7 @@ print(fibonacci(8))
 # Example 2
 print(fibonacci(12))
 
-# Task 3: Find Duplicates in a List
+# Task 34: Find Duplicates in a List
 def find_duplicates(lst):
     counter = Counter(lst)
     return [num for num, count in counter.items() if count > 1]
@@ -37,7 +37,7 @@ print(find_duplicates([1, 1, 2, 3, 4, 5, 6, 2]))
 # Example 2
 print(find_duplicates([7, 8, 8, 9, 10, 11, 11]))
 
-# Task 4: Longest Increasing Subsequence
+# Task 35: Longest Increasing Subsequence
 def longest_increasing_subsequence(arr):
     if not arr:
         return 0
@@ -53,7 +53,7 @@ print(longest_increasing_subsequence([1, 3, 5, 2, 8, 6, 7]))
 # Example 2
 print(longest_increasing_subsequence([4, 10, 6, 8, 11, 15]))
 
-# Task 5: Find K Largest Elements
+# Task 36: Find K Largest Elements
 def find_k_largest(lst, k):
     return heapq.nlargest(k, lst)
 
@@ -62,7 +62,7 @@ print(find_k_largest([9, 2, 5, 4, 6, 8], 3))
 # Example 2
 print(find_k_largest([12, 1, 4, 7, 10], 2))
 
-# Task 6: Rotate Matrix
+# Task 37: Rotate Matrix
 def rotate_matrix(matrix):
     return [list(row) for row in zip(*matrix[::-1])]
 
@@ -71,7 +71,7 @@ print(rotate_matrix([[1, 2], [3, 4]]))
 # Example 2
 print(rotate_matrix([[5, 6, 7], [8, 9, 10], [11, 12, 13]]))
 
-# Task 7: Sudoku Validator
+# Task 38: Sudoku Validator
 def is_valid_sudoku(board):
     def is_valid_group(group):
         group = [num for num in group if num != '.']
@@ -105,7 +105,7 @@ sudoku_board_1 = [["5", "3", ".", ".", "7", ".", ".", ".", "2"],
     [".", ".", "2", ".", "8", ".", ".", "7", "9"]]
 print(is_valid_sudoku(sudoku_board_1))
 
-# Task 8: Virtual Stock Market Simulator
+# Task: Virtual Stock Market Simulator
 class StockMarket:
     def __init__(self):
         self.stocks = {"AAPL": 150, "GOOGL": 2800, "TSLA": 700}
